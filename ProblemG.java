@@ -24,11 +24,7 @@ public class ProblemG {
 
     public static void main(String[] args) {
 
-        int[] nums = read();
-        material1 = nums[0];
-        material2 = nums[1];
-        profitA = nums[2];
-        profitB = nums[3];
+        read();
 
         findVertices(vertices);
         calculateTotalProfit();
@@ -68,20 +64,17 @@ public class ProblemG {
         vertices.add(new Point(0, y));
     }
 
-    private static int[] read() {
-        int[] nums = new int[4];
+    private static void read() {
         Scanner scanner = new Scanner(System.in);
         String line = scanner.nextLine();
-        int i = 0;
-        while (line != null) {
-            String[] s = line.split("\\s+");
-            nums[i] = Integer.parseInt(s[0]);
-            nums[i + 1] = Integer.parseInt(s[1]);
-            i += 2;
-            line = scanner.nextLine();
-        }
+        String[] s = line.split("\\s+");
+        material1 = Integer.parseInt(s[0]);
+        material2 = Integer.parseInt(s[1]);
+        line = scanner.nextLine();
+        s = line.split("\\s+");
+        profitA = Integer.parseInt(s[0]);
+        profitB = Integer.parseInt(s[1]);
         scanner.close();
-        return nums;
     }
 
 

@@ -62,7 +62,7 @@ public class ProblemB {
 
     private static void read() {
         Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
+        int N = Integer.parseInt(scanner.nextLine());
         String line = scanner.nextLine();
         while (line != null) {
             String[] s = line.split("\\s+");
