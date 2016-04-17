@@ -10,8 +10,7 @@ public class ProblemD {
 
     public static void main(String[] args) {
 
-        read(args[0]);
-
+        read();
         for (int[] edge : graph)
             for (int vertex : edge) {
                 findCycle(new int[]{vertex});
@@ -139,12 +138,12 @@ public class ProblemD {
         return false;
     }
 
-    private static void read(String input) {
+    private static void read() {
         Scanner scanner = new Scanner(System.in);
-        int numOfEdge = Integer.parseInt(scanner.nextLine());
-        graph = new int[numOfEdge][2];
+        int N = Integer.parseInt(scanner.nextLine());
+        graph = new int[N][2];
         String line = scanner.nextLine();
-        for (int i = 0; line != null; i++) {
+        for (int i = 0; i < N; i++) {
             String[] s = line.split("\\s+");
             graph[i][0] = Integer.parseInt(s[0]);
             graph[i][1] = Integer.parseInt(s[1]);
@@ -152,5 +151,4 @@ public class ProblemD {
         }
         scanner.close();
     }
-
 }
