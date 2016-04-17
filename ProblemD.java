@@ -115,6 +115,7 @@ public class ProblemD {
         for (int v : longestCycle) {
             output += v + " ";
         }
+        System.out.println(longestCycle.length);
         System.out.println(output);
     }
 
@@ -142,12 +143,11 @@ public class ProblemD {
         Scanner scanner = new Scanner(System.in);
         int N = Integer.parseInt(scanner.nextLine());
         graph = new int[N][2];
-        String line = scanner.nextLine();
         for (int i = 0; i < N; i++) {
+            String line = scanner.nextLine();
             String[] s = line.split("\\s+");
             graph[i][0] = Integer.parseInt(s[0]);
             graph[i][1] = Integer.parseInt(s[1]);
-            line = scanner.nextLine();
         }
         scanner.close();
     }
